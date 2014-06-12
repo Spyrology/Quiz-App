@@ -1,0 +1,173 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: rgb(255,252,251);
+	min-width: 980px;
+}
+
+#background-ring {
+	position: relative;
+	height: 90%;
+	width: 90%;
+	margin: 0 auto;
+	top: 5%;
+	text-align: center;
+	background-color: rgb(83,97,97);
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#start-screen {
+	position: relative;
+	height: 300px;
+	width: 400px;
+	margin: 0 auto;
+	color: black;
+	top: 25%;
+}
+
+#start-screen h1 {
+	color: rgb(255,252,251);
+	font-size: 40px;
+}
+
+#start-screen button, #modal button {
+	position: relative;
+	margin-top: 10%;
+	height: 41px;
+	width: 100px;
+	border-radius: 15px;
+	border: 4px solid;
+	border-color: rgb(117,161,194);
+	background-color: rgb(255,252,251);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#start-screen button:hover, #modal button:hover {
+	background-color: rgb(117,194,194);
+	border-color: rgb(117,194,194);
+	cursor: default;
+	-webkit-transition: background, border .5s ease-in-out;
+	-moz-transition: background, border .5s ease-in-out;
+	-ms-transition: background, border .5s ease-in-out;
+	-o-transition: background, border .5s ease-in-out;
+	transition: background, border .5s ease-in-out;
+}
+
+#outer {
+	position: relative;
+	height: 90%;
+	width: 95%;
+	margin: 0 auto;
+	top: 5%;
+	background-color: rgb(255,252,251);
+	border-radius: 15px;
+	-webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	display: none;
+}
+
+#modal {
+	position: relative;
+	height: 90%;
+	width: 95%;
+	margin: 0 auto;
+	top: 5%;
+	background-color: rgb(219,224,177);
+	border-radius: 15px;
+	text-align: center;
+	display: none;
+}
+
+#modal button {
+	position: relative;
+	margin: 0 auto;
+	top: 75%;
+}
+
+.explanations {
+	position: relative;
+	top: 20%;
+}
+
+#outer h1 {
+	position: absolute;
+	color: rgb(117,161,194);
+	font-size: 40px;
+	font-weight: bold;
+	top: 12%;
+	left: 500px;
+	text-shadow: 0px 3px 10px rgba(150, 150, 150, 1);
+}
+
+#inner {
+	position: absolute;
+	height: 50%;
+	width: 80%;
+	margin: 0 auto;
+	top: 25%;
+	left: 10%;
+	background-color: rgb(117,161,194);
+	border-radius: 15px;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+#question {
+	margin-top: 15px;
+	color: black;
+	font-size: 25px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 85%;
+}
+
+#progress {
+	position: absolute;
+	top: 85%;
+	left: 577px;
+	color: rgb(117,161,194);
+	font-size: 40px;
+	font-weight: bold;
+	text-shadow: 0px 3px 10px rgba(150, 150, 150, 1);
+}
+
+.choices {
+	position: relative;
+	display: inline-block;
+	height: 41px;
+	width: 100px;
+	top: 77px;
+	margin: 0 auto;
+	margin-left: 20px;
+	border-radius: 15px;
+	border: 4px solid;
+	border-color: rgb(83,97,97);
+	background-color: rgb(255,252,251);
+	color: black;
+	line-height: 2.5;
+}
+
+.choices:hover {
+	background-color: rgb(117,194,194);
+	border-color: rgb(117,194,194);
+	cursor: default;
+	-webkit-transition: background, border .5s ease-in-out;
+	-moz-transition: background, border .5s ease-in-out;
+	-ms-transition: background, border .5s ease-in-out;
+	-o-transition: background, border .5s ease-in-out;
+	transition: background, border .5s ease-in-out;
+}
