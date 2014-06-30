@@ -19,20 +19,24 @@
 			<button>Start</button>
 		</div>
 		<div id="outer"> 
-			<h1>Question #1</h1>
+			<h1>Question #<span id="question-count">1</span></h1>
 			<div id="inner">
 				<p id="question"></p>
 					<ul id="choices-block">
-						<li class="choices"></li>
-						<li class="choices"></li>
-						<li class="choices"></li>
-						<li class="choices"></li>
 					</ul>
 			</div>
-			<p id="progress">1/12</p>
+			<div id="progress">
+				<div class="node"></div>
+				<div class="node"></div>
+				<div class="node"></div>
+				<div class="node"></div>
+			</div>
 		</div>
 		<div id="modal">
-			<button>Continue</button>
+			<p></p>
+			<div id="final-score">Your final score is: <span>0</span></div>
+			<button id="next-question">Continue</button>
+			<button id="restart-quiz">Take Two!</button>
 		</div>
 	</section>
 </body>
