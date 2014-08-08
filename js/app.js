@@ -1,14 +1,14 @@
 var question1 = {
-	question: "Which one of the following sequences is most likely to occur?",
-	choices: ["HHHTTT", "TTTTTT", "HTHHTH", "None of these"],
+	question: "Six babies are born in sequence at a hospital in your city. Which sequence representing their sex is least likely?",
+	choices: ["GBBGBG", "GGGGGG", "BGBBGB", "None of these"],
 	answer: "None of these",
 	explanation: "Even though such a scenario is a truly random process between two approximately equal outcomes, we have a tendency to believe that regularity (such as a sequence of six consecutive female births) is somehow less likely than an alternating sequence of male and female births. Our proclivity to seek patterns causes us to misjudge the randomness of randomness."
 };
 
 var question2 = {
 	question: "Is the height of the tallest redwood more or less than 1,200 feet? What is your best guess about the height of the tallest redwood?",
-	choices: ["187", "412", "876", "1180"],
-	answer: "412",
+	choices: ["187", "379", "876", "1180"],
+	answer: "379",
 	explanation: "When two different groups were posed this question, wherein the only variation was the suggested height in the question itself (1200 feet versus 187 feet) the mean estimate produced by the two groups varied by 562 feet! That is the power of “anchoring.”"
 };
 
@@ -23,21 +23,21 @@ var question4 = {
 	question: "Linda is thirty-one years old, single, outspoken, and very bright. She majored in biology. As a student, she was deeply concerned with issues concerning social justice and climate change, and also participated in anti-Iraq War demonstrations. Which is more likely:",
 	choices: ["Linda is a bank teller", "Linda is a bank teller and is active in protests against the coal industry"],
 	answer: "Linda is a bank teller",
-	explanation: "The most coherent stories are not necessarily the most probable, but they are plausible. The notions of coherence, plausibility, and probability are easily confused by the unwary."
+	explanation: "The population of bank tellers named Linda that is also active in protests against the coal industry, is necessarily a subset of the population of bank tellers named just named Linda. Therefore the latter population is larger. “The most coherent stories are not necessarily the most probable, but they are plausible, and the notions of coherence, plausibility, and probability are easily confused by the unwary.”"
 };
 
 var question5 = {
 	question: "A cab is involved in a hit-and-run accident at night. Two cab companies, the Green and the Blue, operate in the city. You are given the following data: 1) 85% of cabs in the city are Green, 15% are Blue; and 2) A witness identified the cab as Blue. The court tested the reliability of the witness and found the witness to be accurate 80% of the time. What is the probability that the cab involved in the accident was Blue rather than Green?",
 	choices: ["80%", "41%"],
 	answer: "41%",
-	explanation: "Statistical base rates are facts about a population to which a case belongs, but they are not relevant to the individual case. Statistical base rates are generally underweighted, and sometimes neglected altogether, when specific information about the case at hand is available."
+	explanation: "Imagine if you had been told that the two cab companies operate the same number of cabs, but green cabs are involved in 85% of accidents. Believe it or not, the two scenarios are mathematically equivalent. They are, however, admittedly quite psychologically different. Statistical base rates (the first data point you were given) are facts about a population to which a case belongs, but are generally underweighted (if not altogether neglected) when specific information about the case at hand (the second data point) is available."
 };
 
 var question6 = {
 	question: "Understanding your prospects’ situation, identifying their problem, clarifying the short-term and long-term implications of that problem, and quantifying the financial and emotional benefits your prospect would experience after the resolution of their problem is known as:",
 	choices: ["Value-based selling", "Education-based selling"],
 	answer: "Value-based selling",
-	explanation: "Value-based selling is about listening to your prospects’ needs, and applying both empathy and critical thinking to properly identify their problem and recommend a solution. Education-based selling has more directly to do with closing any information-asymmetry gap between you and your prospect with respect to your offering itself. Beware! Your offering better be the best."
+	explanation: "Value-based selling is about listening to your prospects’ needs, and applying both empathy and critical thinking to properly identify their problem and recommend a solution. Education-based selling has more directly to do with closing any information asymmetry gap between you and your prospect with respect to the offering itself. Beware! Your offering better be the best."
 };
 
 var question7 = {
@@ -56,7 +56,7 @@ var question8 = {
 
 var question9 = {
 	question: "Which of the following is a form of value:",
-	choices: ["Shard resources (think car rentals)", "Reselling (think middlemen", "Agency (think advertising)", "All of the above"],
+	choices: ["Shard resources (think car rentals)", "Reselling (think middlemen)", "Agency (think advertising)", "All of the above"],
 	answer: "All of the above",
 	explanation: "I’m soft-balling you now. Another 9 forms of value are: products, services, subscriptions, leases, aggregated audiences, loans, options, insurance, and capital. There’s not a whole lot else, folks!"
 };
@@ -131,7 +131,7 @@ function showAnswer($this) {
 			$("#explanation").text(explanationStock);
 		}
 		else {
-			$("#answer").text("Almost. The answer is " + answerStock);
+			$("#answer").text("Almost. The answer is " + answerStock + ".");
 			$("#explanation").text(explanationStock);
 		};
 		$("#outer").hide();
@@ -159,6 +159,7 @@ function finalScore() {
 	$("#answer").text("");
 	$("#explanation").text("Thank you for playing. Hopefully you learned something new. Play again to review the concepts.");
 	$("#final-score").show();
+	$("#sources").show();
 };
 
 //After all questions have been answered, user can try again
@@ -170,6 +171,7 @@ function newGame() {
 		$("#modal").hide();
 		$("#outer").fadeIn(750);
 		$("#final-score").hide();
+		$("#sources").hide();
 		$("#progress .node").css({"background-color": ""});
 		displayQNum();
 		updateScore();
@@ -178,7 +180,6 @@ function newGame() {
 
 
 $(document).ready(function() {
-	alert("hello");
 	
 	$("#start-screen button").click(
 		startScreen
